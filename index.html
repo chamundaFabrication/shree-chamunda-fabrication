@@ -13,7 +13,8 @@
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Shree Chamunda Fabrication</h1>
       <nav>
-        <ul class="flex space-x-4">
+        <button id="menu-toggle" class="sm:hidden text-xl focus:outline-none">&#9776;</button>
+        <ul id="menu" class="hidden sm:flex space-x-4">
           <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
           <li><a href="#about" class="hover:text-yellow-400">About Us</a></li>
           <li><a href="#services" class="hover:text-yellow-400">Services</a></li>
@@ -25,7 +26,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="bg-cover bg-center h-screen flex items-center justify-center text-center" style="background-image: url('hero.jpg');">
+  <section id="home" class="bg-cover bg-center h-screen flex items-center justify-center text-center" style="background-image: url('https://tse4.mm.bing.net/th?id=OIP.DCp4YmaXt1RXhrcqT9mrQQHaJ1&pid=Api');">
     <div class="bg-black bg-opacity-50 p-6 rounded-lg">
       <h1 class="text-4xl text-white font-bold">Innovative Fabrication Solutions</h1>
       <p class="text-gray-300 mt-4">Crafting Excellence, One Design at a Time</p>
@@ -47,19 +48,15 @@
       <h2 class="text-3xl font-bold text-center mb-10">Our Services</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <div class="bg-white shadow-md p-6 rounded-lg text-center">
-          <i class="fas fa-wrench text-4xl text-gray-700 mb-4"></i>
           <h3 class="font-bold">Custom Metal Fabrication</h3>
         </div>
         <div class="bg-white shadow-md p-6 rounded-lg text-center">
-          <i class="fas fa-building text-4xl text-gray-700 mb-4"></i>
           <h3 class="font-bold">Industrial Structures</h3>
         </div>
         <div class="bg-white shadow-md p-6 rounded-lg text-center">
-          <i class="fas fa-home text-4xl text-gray-700 mb-4"></i>
           <h3 class="font-bold">Residential Fabrication</h3>
         </div>
         <div class="bg-white shadow-md p-6 rounded-lg text-center">
-          <i class="fas fa-tools text-4xl text-gray-700 mb-4"></i>
           <h3 class="font-bold">Welding and Repairs</h3>
         </div>
       </div>
@@ -71,11 +68,10 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-10">Our Portfolio</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        <!-- Replace the src with actual Instagram images -->
-        <img src="image1.jpg" alt="Fabrication Work" class="rounded-lg shadow-md">
-        <img src="image2.jpg" alt="Fabrication Work" class="rounded-lg shadow-md">
-        <img src="image3.jpg" alt="Fabrication Work" class="rounded-lg shadow-md">
-        <img src="image4.jpg" alt="Fabrication Work" class="rounded-lg shadow-md">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.Mm-nR_MdWeVpDWFxeJJ9oQHaHa&pid=Api" alt="Fabrication Work" class="rounded-lg shadow-md">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.CcGHeDTUNl0cFrrhAzbcNQHaEK&pid=Api" alt="Fabrication Work" class="rounded-lg shadow-md">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.DCp4YmaXt1RXhrcqT9mrQQHaJ1&pid=Api" alt="Fabrication Work" class="rounded-lg shadow-md">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.DU_g79-S-z5qX48Y8UsWqwHaFj&pid=Api" alt="Fabrication Work" class="rounded-lg shadow-md">
       </div>
     </div>
   </section>
@@ -84,29 +80,31 @@
   <section id="contact" class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
-      <form class="max-w-lg mx-auto">
-        <div class="mb-4">
-          <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-600 bg-gray-800 text-white">
-        </div>
-        <div class="mb-4">
-          <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-600 bg-gray-800 text-white">
-        </div>
-        <div class="mb-4">
-          <textarea placeholder="Your Message" rows="4" class="w-full p-3 rounded-lg border border-gray-600 bg-gray-800 text-white"></textarea>
-        </div>
-        <button type="submit" class="w-full py-3 bg-yellow-400 text-gray-900 font-bold rounded-lg hover:bg-yellow-500">Send Message</button>
-      </form>
+      <div class="text-center">
+        <p><strong>Location:</strong> Shahibaug, Ahmedabad, Gujarat</p>
+        <p><strong>Phone:</strong> +91 1234567890</p>
+        <p><strong>Email:</strong> chamunda@example.com</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-gray-400 py-6 text-center">
     <p>&copy; 2024 Shree Chamunda Fabrication. All Rights Reserved.</p>
+    <p class="mt-2">Address: Shahibaug, Ahmedabad, Gujarat</p>
     <div class="mt-4">
       <a href="#" class="text-gray-400 hover:text-white mx-2"><i class="fab fa-instagram"></i></a>
       <a href="#" class="text-gray-400 hover:text-white mx-2"><i class="fab fa-facebook"></i></a>
     </div>
   </footer>
+
+  <script>
+    // Responsive Navbar
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
